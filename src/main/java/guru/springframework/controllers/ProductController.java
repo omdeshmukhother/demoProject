@@ -18,7 +18,6 @@ import javax.validation.Valid;
  * Created by jt on 1/10/17.
  */
 @Controller
-@RequestMapping("/spring-boot-postgres-0.0.1-SNAPSHOT")
 public class ProductController {
     private ProductService productService;
 
