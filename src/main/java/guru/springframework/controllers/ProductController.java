@@ -33,12 +33,12 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/spring-boot-postgres-0.0.1-SNAPSHOT/")
     public String redirToList(){
         return "redirect:/product/list";
     }
 
-    @RequestMapping({"/product/list", "/product"})
+    @RequestMapping({"/spring-boot-postgres-0.0.1-SNAPSHOT/product/list", "/spring-boot-postgres-0.0.1-SNAPSHOT/product"})
     public String listProducts(Model model){
         model.addAttribute("products", productService.listAll());
         return "product/list";
