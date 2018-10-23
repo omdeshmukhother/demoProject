@@ -18,6 +18,7 @@ import javax.validation.Valid;
  * Created by jt on 1/10/17.
  */
 @Controller
+@RequestMapping("/spring-boot-postgres-0.0.1-SNAPSHOT")
 public class ProductController {
     private ProductService productService;
 
@@ -33,12 +34,14 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping("/spring-boot-postgres-0.0.1-SNAPSHOT/")
+    @RequestMapping("/")
     public String redirToList(){
-        return "redirect:/spring-boot-postgres-0.0.1-SNAPSHOT/product/list";
+    	System.out.println("Hiii OMIII");
+    	
+        return "redirect:/product/list";
     }
 
-    @RequestMapping({"/spring-boot-postgres-0.0.1-SNAPSHOT/product/list", "/spring-boot-postgres-0.0.1-SNAPSHOT/product"})
+    @RequestMapping({"/product/list", "/product"})
     public String listProducts(Model model){
         model.addAttribute("products", productService.listAll());
         return "product/list";
