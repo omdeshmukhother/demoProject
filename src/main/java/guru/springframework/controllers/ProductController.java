@@ -35,7 +35,7 @@ public class ProductController {
 
     @RequestMapping("/spring-boot-postgres-0.0.1-SNAPSHOT/")
     public String redirToList(){
-        return "redirect:/product/list";
+        return "redirect:/spring-boot-postgres-0.0.1-SNAPSHOT/product/list";
     }
 
     @RequestMapping({"/spring-boot-postgres-0.0.1-SNAPSHOT/product/list", "/spring-boot-postgres-0.0.1-SNAPSHOT/product"})
