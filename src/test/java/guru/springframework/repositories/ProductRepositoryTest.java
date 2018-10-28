@@ -37,6 +37,8 @@ public class ProductRepositoryTest {
 
         //when
         productRepository.save(product);
+        
+        
 
         //then
         Assert.assertNotNull(product.getId());
